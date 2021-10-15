@@ -1,0 +1,41 @@
+
+
+1. use my_first_db
+
+2. db.createCollection('students')
+
+3. db.students.insert({name: 'James', home_state: 'Washington', lucky_number: '7', birthday: {month: 'May', day: '15', year: '1997'}})
+
+4. db.students.find(), db.students.find().pretty()
+
+5. db.students.find({home_state: 'California'})
+
+6. db.students.find({lucky_number: {$gt: 3}})
+
+7. db.students.find({lucky_number: {$lt: 10}})
+
+8. db.students.find({lucky_number: {$gt: 1}}, {lucky_number: {$lt: 9}})
+
+9. db.students.update({Jack}, {$addToSet: {interests: 'coding', 'brunch', 'MongoDB'}})
+
+10. db.students.update({Mike}, {$addToSet: {interests: 'Jiu-Jitsu'}})
+
+11. db.students.update({James}, {$addToSet: {interests: 'taxes'}})
+
+12. db.students.remove({interests: 'taxes'})
+
+13. db.students.remove({home_state: "California"})
+
+14. db.students.remove({name: "Mike"}) 
+
+15. db.students.remove({luck_number: {$gt: 5}})
+
+16. db.students.updateMany({}, {$addToSet: {number_of_belts: 0}})
+
+17. db.students.update({}, {$inc {students_in_washington: +1}})
+
+18. db.students.updateMany( {}, {$rename: {"number_of_belts": "belts_earned"}})
+
+19. db.students.remove({luck_number:})
+
+20. db.students.updateMany({}, {$currentDate: {updated_on: {type: "date"}})
